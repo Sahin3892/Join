@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="css/footer.css" />
+      <link rel="stylesheet" href="css/basic.css" />
+      <link rel="stylesheet" href="css/side-pages.css" />
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+      <script defer src="js/storage.js"></script>
+      <script defer src="js/register.js"></script>
+      <script defer src="js/login.js"></script>
+      <script defer src="js/contact.js"></script>
+      <script defer src="js/contact_administration.js" type="text/javascript"></script>
+      <script defer src="js/add_task_foundation.js"></script>
+      <script defer src="js/add_task_left_row.js"></script>
+      <script defer src="js/add_task_right_row.js"></script>
+      <script defer src="js/add_task_validation.js" type="text/javascript"></script>
+      <script defer src="js/html_templates.js"></script>
+      <script defer src="js/arrays.js"></script>
+      <script defer src="js/html_render.js" type="text/javascript"></script>
+      <title>Legal Notice</title>
+</head>
+
+<body onload="makeJoinBlue(), includeHTML(), privacyLegalInit()">
+      <div w3-include-html="top-bar.html"></div>
+      <div class="side-content">
+            <div class="title-arrow-container">
+                  <h1>Legal Notice</h1><img onclick="returnToLastPage()" src="/assets/img/arrow-left-line.svg" alt="">
+            </div>
+
+            <h2>Imprint</h2>
+            <ul style="list-style: none;">
+                  <li>Sahin Duruöz & Emanuel Klimschak</li>
+                  <li>Heinrich-Janssen-Str. 11</li>
+                  <li>42289 Wuppertal</li>
+            </ul>
+
+            <h2>Acceptance of terms</h2>
+            <p>By accessing and using Join (Product), you acknowledge and agree to the following terms and conditions,
+                  and any policies, guidelines, or amendments thereto that may be presented to you from time to time.
+                  We, the listed students, may update or change the terms and conditions from time to time without
+                  notice.</p>
+
+            <h2>Scope and ownership of the product</h2>
+            <p>Join has been developed as part of a student group project in a web development bootcamp at the Developer
+                  Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business
+                  usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other
+                  aspect of quality regarding this Product.<br /><br />
+
+                  The design of Join is owned by the Developer Akademie GmbH. Unauthorized use, reproduction,
+                  modification, distribution, or replication of the design is strictly prohibited.</p>
+
+            <h2>Use of the product</h2>
+            <p>Join is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Join for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Join.</p>
+            
+            <h2>Disclaimer of warranties and limitation of liability</h2>
+            <p>Join is provided "as is" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Join.</p>
+
+      </div>
+      <div w3-include-html="footer.html"></div>
+
+</body>
+<script>
+      function returnToLastPage(){
+      history.back()
+}
+      function makeJoinBlue() {
+            document.body.innerHTML = document.body.innerHTML.replace(/\bJoin \b/g, "<span style='color: #29ABE2;'>Join </span>");
+            document.body.innerHTML = document.body.innerHTML.replace(/\bDeveloper Akademie GmbH\b/g, "<span style='color: #29ABE2;'>Developer Akademie GmbH</span>");
+      }
+</script>
+
+</html>

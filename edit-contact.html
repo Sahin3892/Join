@@ -1,0 +1,51 @@
+<div id="contactFormOverlay"  class="newContact-Overlay-BG">
+    <div class="overlay">
+
+        <button onclick="closeForm()" class="newContactAbort"><img src="/assets/img/Close.svg" ></button>
+        <div class="overlay-left">
+
+            <img src="assets/img/Capa-2.svg">
+            <div class="overlay-left-text">
+                <span class="overlay-left-text-first">Edit contact</span>
+                <span class="overlay-left-text-second">Tasks are better with a team!</span>
+            </div>
+
+        </div>
+        <div class="overlay-img-div" id="overlay-img-div">
+            <img id="edit-img" src="">
+        </div>
+        <form class="overlay-right-side" id="editContactForm" onsubmit="saveEditedContact(); return false;">
+
+
+
+            <div class="overlay-input">
+                <div class="form_assign_field_container overlay-field">
+                    <input class="form_assign_field" type="text" id="edit-name" placeholder="Name" required>
+                    <img src="/assets/img/person-contact.svg" class="pointer" alt="">
+                </div>
+                <div class="form_assign_field_container overlay-field">
+                    <input class="form_assign_field" type="email" id="edit-email" placeholder="E-Mail" required>
+                    <img src="/assets/img/mail.svg" class="pointer" alt="">
+                </div>
+                <div class="form_assign_field_container overlay-field">
+                    <input class="form_assign_field" type="tel" id="edit-phone" placeholder="Phone" required
+                           title="International-Format: + or 00 and at least 5 digits after the + or 00, no spaces."
+                           pattern="(\+|00)?[0-9]{5,}">
+                    <img src="/assets/img/call.svg" class="pointer" alt="">
+                </div>
+                
+                <div class="overlay-buttons">
+                    <button type="button" class="secondary-button contact-button" onclick="closeForm();">
+                        <span>Cancel</span>
+                    </button>
+                    <button type="submit" class="primary-button contact-button">
+                        Save contact<img src="/assets/img/check-white.svg">
+                    </button>
+                </div>-
+            </div>
+        </form>
+        
+
+        
+    </div>
+</div>

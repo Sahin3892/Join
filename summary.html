@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet" />
+      <link rel="stylesheet" href="./css/basic.css" />
+      <link rel="stylesheet" href="./css/board.css" />
+      <link rel="stylesheet" href="./css/addtask.css" />
+      <link rel="stylesheet" href="./css/task-overview.css" />
+      <link rel="stylesheet" href="./css/edit-task.css" />
+      <link rel="stylesheet" href="./css/summary.css" />
+      <link rel="stylesheet" href="./css/footer.css" />
+      <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+      <script defer src="js/login.js" type="text/javascript"></script>
+      <script defer src="js/add_task_foundation.js"></script>
+      <script defer src="js/add_task_left_row.js"></script>
+      <script defer src="js/add_task_right_row.js"></script>
+      <script defer src="js/add_task_validation.js" type="text/javascript"></script>
+      <script defer src="js/arrays.js" type="text/javascript"></script>
+      <script defer src="js/storage.js" type="text/javascript"></script>
+      <script defer src="js/register.js" type="text/javascript"></script>
+      <script defer src="js/html_templates.js" type="text/javascript"></script>
+      <script defer src="js/task-overview.js" type="text/javascript"></script>
+      <script defer src="js/edit-task-form.js" type="text/javascript"></script>
+      <script defer src="js/edit-task-load-render.js" type="text/javascript"></script>
+      <script defer src="js/edit-task-save-validate.js" type="text/javascript"></script>
+      <script defer src="js/summary.js" type="text/javascript"></script>
+      
+
+
+
+
+      <title>summary</title>
+</head>
+
+
+<body class="body-summary" onload="loadSummaryCount(), includeHTML()">
+      <div w3-include-html="top-bar.html"></div>
+      <div id="start-background" class="start-background"></div>
+      <div class="summary-container">
+      <div class="summary-title-container">
+            <h1 class="summary-title">Join 360</h1>
+            <hr /><span>Key Metrics at a Glance</span>
+            <hr id="hr-mobile" />
+      </div>
+
+      <div class="tile-greet-container">
+            <div class="tile-group">
+
+
+                  <div class="summary-column">
+
+                        <a class="summary-status" href="board.html">
+                              <div class="summary-tile">
+                                    <div class="summary-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33"
+                                                viewBox="0 0 33 33" fill="none">
+                                                <mask id="mask0_89718_8807" style="mask-type:alpha"
+                                                      maskUnits="userSpaceOnUse" x="0" y="0" width="33" height="33">
+                                                      <rect x="0.582031" y="0.741211" width="32" height="32"
+                                                            fill="#D9D9D9" />
+                                                </mask>
+                                                <g mask="url(#mask0_89718_8807)">
+                                                      <path
+                                                            d="M7.2487 26.0746H9.11536L20.6154 14.5746L18.7487 12.708L7.2487 24.208V26.0746ZM26.3154 12.6413L20.6487 7.04129L22.5154 5.17463C23.0265 4.66351 23.6543 4.40796 24.3987 4.40796C25.1431 4.40796 25.7709 4.66351 26.282 5.17463L28.1487 7.04129C28.6598 7.5524 28.9265 8.16907 28.9487 8.89129C28.9709 9.61351 28.7265 10.2302 28.2154 10.7413L26.3154 12.6413ZM24.382 14.608L10.2487 28.7413H4.58203V23.0746L18.7154 8.94129L24.382 14.608Z" />
+                                                </g>
+                                          </svg>
+
+                                    </div>
+
+                                    <div class="summary-div-group">
+                                          <div id="summary-to-do" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">To-Do</div>
+                                    </div>
+                              </div>
+                        </a>
+                        <a class="summary-status" href="board.html">
+                              <div class="summary-tile">
+                                    <div class="summary-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="30"
+                                                viewBox="0 0 38 30" fill="none">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M36.373 1.39486C37.849 2.64298 38.0338 4.85134 36.7857 6.32737L18.071 28.4594C17.4418 29.2036 16.5308 29.6517 15.5572 29.6959C14.5837 29.7401 13.6358 29.3765 12.9417 28.6924L1.71293 17.6264C0.33616 16.2695 0.319984 14.0535 1.67681 12.6768C3.03363 11.3 5.24965 11.2838 6.62642 12.6406L15.1648 21.0553L31.4405 1.80754C32.6886 0.331506 34.897 0.146743 36.373 1.39486Z" />
+                                          </svg>
+                                    </div>
+                                    <div class="summary-div-group">
+                                          <div id="summary-done" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">Done</div>
+                                    </div>
+                              </div>
+                        </a>
+
+                  </div>
+
+                  <div class="summary-column">
+                        <a class="summary-status urgent-date-container" href="board.html">
+                              <div class="summary-tile urgent-date-group">
+                                    <div class="summary-icon urgent-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="26"
+                                                viewBox="0 0 35 26" fill="none">
+                                                <path
+                                                      d="M32.3128 25.1163C31.9118 25.117 31.5211 24.9874 31.1982 24.7467L17.093 14.2168L2.98773 24.7467C2.78971 24.8948 2.56479 25.002 2.32583 25.0621C2.08687 25.1223 1.83854 25.1342 1.59502 25.0973C1.3515 25.0603 1.11755 24.9751 0.906549 24.8467C0.695544 24.7182 0.511607 24.549 0.365241 24.3486C0.218876 24.1482 0.112947 23.9206 0.0535029 23.6788C-0.00594091 23.437 -0.0177355 23.1857 0.0187927 22.9393C0.0925645 22.4416 0.358687 21.9939 0.758615 21.6948L15.9784 10.3214C16.301 10.0798 16.6917 9.94934 17.093 9.94934C17.4943 9.94934 17.885 10.0798 18.2075 10.3214L33.4274 21.6948C33.7452 21.9318 33.9808 22.2643 34.1007 22.645C34.2207 23.0256 34.2187 23.4348 34.0951 23.8142C33.9715 24.1936 33.7326 24.5238 33.4125 24.7576C33.0925 24.9915 32.7076 25.117 32.3128 25.1163Z" />
+                                                <path
+                                                      d="M32.3128 15.1644C31.9118 15.1651 31.5211 15.0355 31.1983 14.7948L17.093 4.26488L2.98774 14.7948C2.58781 15.0939 2.08684 15.22 1.59502 15.1453C1.10321 15.0707 0.660849 14.8014 0.365249 14.3967C0.06965 13.992 -0.0549714 13.485 0.0188004 12.9874C0.0925723 12.4897 0.358694 12.042 0.758623 11.7429L15.9784 0.369488C16.301 0.127857 16.6917 -0.00256348 17.093 -0.00256348C17.4943 -0.00256348 17.885 0.127857 18.2076 0.369488L33.4274 11.7429C33.7452 11.9799 33.9808 12.3124 34.1007 12.693C34.2207 13.0737 34.2187 13.4829 34.0951 13.8623C33.9715 14.2417 33.7326 14.5719 33.4125 14.8057C33.0925 15.0395 32.7076 15.1651 32.3128 15.1644Z" />
+                                          </svg>
+
+                                    </div>
+                                    <div class="summary-div-group">
+                                          <div id="summary-urgency" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">Urgent</div>
+                                    </div>
+                              </div>
+                              <hr class="summary-line">
+                              <div class="summary-tile urgent-date-group">
+                                    <div class="summary-div-group">
+                                          <div class="summary-date" id="summary-date">October 23, 2024</div>
+                                          <div class="summary-status-title">Upcoming Deadline</div>
+                                    </div>
+
+                              </div>
+                        </a>
+                  </div>
+
+
+
+                  <div class="summary-column">
+                        <a class="summary-status" href="board.html">
+                              <div class="summary-tile">
+
+                                    <div class="summary-div-group">
+                                          <div id="summary-tasks" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">Tasks in<br />Board</div>
+                                    </div>
+                              </div>
+                        </a>
+                        <a class="summary-status" href="board.html">
+                              <div class="summary-tile">
+
+                                    <div class="summary-div-group">
+                                          <div id="summary-progress" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">Tasks in<br />Progress</div>
+                                    </div>
+                              </div>
+                        </a>
+                        <a class="summary-status" href="board.html">
+                              <div class="summary-tile">
+
+                                    <div class="summary-div-group">
+                                          <div id="summary-feedback" class="summary-status-count">0</div>
+                                          <div class="summary-status-title">Awaiting<br />Feedback</div>
+                                    </div>
+                              </div>
+                        </a>
+                  </div>
+            </div>
+            <div id="summary-greet" class="summary-greet">
+                  <div id="greet"></div>
+                  <div id="summary-user" class="summary-user"></div>
+
+            </div>
+      </div>
+      
+      <div w3-include-html="footer.html"></div>
+
+</body>
+
+</html>

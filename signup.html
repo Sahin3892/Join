@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/signup.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/addtask.css" />
+    <link rel="stylesheet" href="./css/basic.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="icon" href="/assets/img/favicon.png" type="image/png">
+    <script defer src="js/storage.js"></script>
+    <script defer src="js/register.js"></script>
+    <script defer src="js/add_task_foundation.js"></script>
+    <script defer src="js/add_task_left_row.js"></script>
+    <script defer src="js/add_task_right_row.js"></script>
+    <script defer src="js/add_task_validation.js" type="text/javascript"></script>
+    <script defer src="js/login.js"></script>
+    <script defer src="js/contact.js"></script>
+    <script defer src="js/contact_administration.js" type="text/javascript"></script>
+    <script defer src="js/arrays.js"></script>
+    <title>Sign up</title>
+</head>
+
+
+
+<body onload="initRegister()" class="signup-body">
+
+    <img class="signup-logo" src="assets/img/JoinLogo.svg" alt="" />
+
+    <div class="signUP-center">
+        <a href="/index.html" class="title-arrow-container">
+            <img onclick="" src="/assets/img/arrow-left-line.svg" alt="">
+        </a>
+
+        <form onsubmit="register(); return false;" class="sign-up">
+            <h2 class="header-signup">Sign up</h2>
+            <hr class="signup-hr">
+            <div class="inputs-signup">
+                <div class="form_assign_field_container">
+                    <input class="form_assign_field" required type="text" id="username" placeholder="Name"
+                        class="input-signup input-Text" />
+                    <img src="/assets/img/person-contact.svg" class="pointer" alt="">
+                </div>
+                <div class="form_assign_field_container">
+                    <input class="form_assign_field" required type="email" id="email" placeholder="Email"
+                        class="input-signup input-Text" />
+                    <img src="/assets/img/mail.svg" class="pointer"  alt="">
+                </div>
+                <div class="form_assign_field_container" id="password-container-A">
+                    <input class="form_assign_field" required type="password" id="password" placeholder="Password"
+                        class="input-signup input-Text" />
+                    <img src="/assets/img/lock.svg" class="pointer" id="password-icon-A" alt="">
+                </div>
+                <div class="form_assign_field_container" id="password-container-B">
+                    <input class="form_assign_field" required type="password" id="password2"
+                        placeholder="Confirm Password" class="input-signup input-Text" />
+                    <img src="/assets/img/lock.svg" class="pointer" id="password-icon-B" alt="">
+                </div>
+                <div class="form_input_notice login-validation-container d-none" id="password-register-validation-container">
+                    <div class="login-validation" id="password-register-validation">
+                        <p>Passwords don't match. Please check.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="signup-privacy"><input type="checkbox" class="privacyPolicy" id="privacyPolicy" onclick="hideErrorPrivacy()" />I accept the&nbsp;<a class="link" href="/privacy-policy.html"> Privacy Policy</a>
+           
+            </div>
+            <div class="errorPrivacy d-none" id="errorPrivacy" >Please accept in order to continue</div>
+
+            <button id="registerBtn" class="signup-btn primary-button">Sign up</button>
+            </div>
+  
+        </form>
+    </div>
+        <div id="msgBox"></div>
+    <footer class="footLogIn">
+        <p class="footLogInText"><a class="link-minor" href="/privacy-policy.html">Privacy Policy</a></p>
+        <p class="footLogInText"><a class="link-minor" href="/legal-notice.html">Legal notice</a></p>
+    </footer>
+</body>
+
+</html>

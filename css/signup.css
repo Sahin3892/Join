@@ -1,0 +1,261 @@
+.signup-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.sign-up {
+    display: flex;
+    width: 560px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    border-radius: 30px;
+    background: var(--white, #fff);
+    /* shadoe backlog box */
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    height: auto;
+    padding-bottom: 32px;
+    
+}
+
+.signup-logo {
+    position: absolute;
+    top: 80px;
+    left: 80px;
+
+  }
+
+.input-signup {
+    display: flex;
+    width: 422px;
+    padding: 12px 21px;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    width: 422px;
+    padding: 12px 21px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--Style, #d1d1d1);
+    background: #fff;
+}
+
+.signup-btn {
+    display: flex;
+    padding: 15px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: #2a3647;
+    color: #fff;
+    font-family: Inter;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 25.2px */
+    margin-top: 32px;
+}
+
+.signup-privacy{
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
+}
+.privacyPolicy{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.errorPrivacy{
+    font-size: 12px;
+    margin-top: 8px;
+    color: #FF8190;
+}
+
+.signUP-center {
+    display: flex;
+    justify-content: center;
+    padding: 48px 88px;
+    position: relative;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+
+.header-signup {
+    width: auto;
+    color: #000;
+    text-align: center;
+    /* Version 2/t1 */
+    font-family: Inter;
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 73.2px */
+    margin-top: 48px;
+}
+
+.input-Text {
+    color: var(--Style, #d1d1d1);
+
+    /* Version 2/t6 */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+}
+
+.inputs-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.inputs-signup div{
+    display: flex;
+
+    width: 76% !important;
+    margin: 0;
+    
+  }
+  
+.signup-hr{
+    height: 0px;
+    width: 160px;
+    background-color: #29abe2;
+    border-style: solid;
+    border-color: #29abe2;
+    border-width: 2px;
+    border-radius: 666px;
+    margin-top:24px;
+    margin-bottom:32px;
+}
+
+.title-arrow-container {
+    position: absolute;
+    right: 108px;
+    top: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title-arrow-container img {
+    padding: 8px;
+    border-radius: 200px;
+    transition: ease-in 120ms;
+}
+
+.title-arrow-container img:hover{
+    background-color: #cbcbcb;
+    transition: ease-out 120ms;
+    
+
+}
+
+#password-register-validation-container {
+    width: 83% !important;
+    display: flex;
+    flex-grow: 1;
+    margin-top: -8px;
+}
+#password-register-validation {
+    width: 100%;
+   
+}
+
+@media (max-width: 1024px) {
+    .signup-logo {
+        top: 40px;
+        left: 40px;
+        height: 80px;
+    
+      }
+}
+
+@media (max-width: 768px) {
+    .sign-up{
+        width: 90vw;
+    }
+    .signup-btn.primary-button {
+        width: 86%;
+    }
+    
+}
+
+
+
+@media (max-width: 500px) {
+    .header-signup {
+        font-size: 32px;
+        margin-top: 24px;
+    }
+
+    .signup-hr{
+        border-width: 1px;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .signup-logo {
+        top: 24px;
+        left: 24px;
+        height: 48px;
+    
+      }
+
+      .signup-privacy{
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+    
+    }
+
+  .sign-up{
+    border-radius: 16px;
+    margin-top: 80px;
+  }
+
+  .signUP-center{
+    padding-top: 0px;
+    margin-top: 56px;
+  }
+    .signup-btn.primary-button {
+        width: 86%;
+    }
+
+    #password-register-validation-container {
+        width: 100% !important;
+        justify-content: flex-start;
+        
+
+    }
+    #password-register-validation {
+        width: 100%;
+        margin-left: 7vw;
+       
+    }
+
+    .title-arrow-container{
+        top: 100px;
+    }
+}
+
+.d-none {
+    display: none !important;
+}

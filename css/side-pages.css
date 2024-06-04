@@ -1,0 +1,119 @@
+body{
+      background-color: #f6f7f8;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      
+      margin-top: 140px;
+}
+.top-bar-logo{
+      display: none;
+}
+.footer-body {
+      display: none !important;
+}
+.side-content {
+      margin: 96px 8vw 400px 8vw;
+      
+}
+
+.top-bar span {
+      margin-left: 120px !important;
+      
+}
+
+h1 {
+      font-size: 64px;
+      font-weight: 700;
+      
+}
+
+h2 {
+      font-size: 28px;
+      margin-top: 24px;
+      margin-bottom: 12px;
+}
+
+h3 {
+      font-size: 20px;
+      margin-bottom: 4px;
+}
+
+.title-arrow-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+}
+
+.title-arrow-container img {
+      padding: 8px;
+      border-radius: 200px;
+      transition: ease-in 120ms;
+}
+
+.title-arrow-container img:hover{
+      background-color: #cbcbcb;
+      transition: ease-out 120ms;
+      
+
+}
+
+ol {
+      list-style-type: none; /* Versteckt die Standardnummern */
+      counter-reset: custom-counter; /* Initialisiert einen benutzerdefinierten Zähler */
+    }
+    
+    ol li {
+      counter-increment: custom-counter; /* Erhöht den Zähler für jedes li-Element */
+      position: relative; /* Ermöglicht die Positionierung des Pseudo-Elements */
+    }
+    
+    ol li::before {
+      content: counter(custom-counter) ". "; /* Fügt die Nummerierung ein */
+      position: absolute; /* Positioniert das Pseudo-Element */
+      left: -40px; /* Abstand zum eigentlichen Listeneintrag */
+      /* Weitere Styling-Optionen für die Nummerierung */
+      font-size: 26px;
+      font-weight: 600;
+    }
+    
+
+   
+    
+
+/* xl  */
+@media (max-width: 1280px) {}
+
+/* lg  */
+@media (max-width: 1024px) {
+      body {
+            margin-left: 0px;
+      }
+      .top-bar-logo{
+            display: block;
+      }
+      
+}
+
+/* md  */
+@media (max-width: 768px) {
+      h1 {
+            font-size: 48px;
+            font-weight: 700;
+            
+      }
+      
+      h2 {
+            font-size: 28px;
+            margin-top: 24px;
+            margin-bottom: 12px;
+      }
+      
+      h3 {
+            font-size: 20px;
+            margin-bottom: 4px;
+      }
+}
+
+/* sm  */
+@media (max-width: 640px) {}

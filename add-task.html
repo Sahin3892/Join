@@ -1,0 +1,175 @@
+<body class="add-task-body" onload="initAddTask()">
+      <!-- <button onclick="closeAccountsinAssignDropdown(), loadTheDateFromArray()">Schließen</button> -->
+      <!--<button type="button" class="primary-button add-task" onclick="deleteTasksFromRemoteStorage()">Delete all
+            Tasks</button>-->
+      <div class="addtask_header" id="addtask_header">
+            <h1 class="add-task">Add Task</h1>
+
+      </div>
+
+      <form class="form_container">
+            <div class="form-elements-container">
+
+                  <div class="addtask_left_form">
+                        <div class="form_input_container">
+                              <div class="form_input_label">
+                                    <h4>Title<span class="required">*</span></h4>
+                              </div>
+                              <input class="form_input_field" id="input_title" name="addtask_title"
+                                    placeholder="Enter a Title" required="required" onclick="removeError('title')">
+                              <div class="form_input_notice">
+                                    <p id="input-validation" class="d-none">Please enter a title</p>
+                              </div>
+                        </div>
+
+                        <div class="form_textarea_container">
+                              <div class="form_textarea_label">
+                                    <h4>Description</h4>
+                              </div>
+                              <textarea onclick="removeError('description')" class="form_textarea_field"
+                                    id="textarea_description" name="addtask_description"
+                                    placeholder="Enter a Description"></textarea>
+                              <div class="form_textarea_notice">
+                                    <p class="d-none" id="textarea-validation">Please add a description</p>
+                              </div>
+                        </div>
+
+
+                        <div class="form_assign_container">
+                              <div class="form_assign_label">
+                                    <h4>Assigned to</h4>
+                              </div>
+
+                              <div class="form_assign_field_list_container" id="form_assign_container">
+                                    <div class="form_assign_field_container"
+                                          onclick="toggleDropdown(), filterAccountsToAssign()">
+                                          <input class="form_assign_field " name="assign_title"
+                                                id="search_accounts_to_assign" placeholder="Select contacts"
+                                                oninput="openDropdownOnInput(), filterAccountsToAssign()"><img
+                                                src="/assets/img/arrow_drop_downaa.svg" class="pointer" alt="">
+                                    </div>
+                                    <div id="assign_list_container" class="d-none">
+                                          <div class="assign_ul_button">
+                                                <ul id="assign_list" class="form_assign_dropdown "></ul>
+                                                <div class="assign_add_contact">
+                                                      <button type="button" onclick="addNewContact()"
+                                                            class="form-add-task-btn"><span>Add New Contact</span><img
+                                                                  src="/assets/img/person_add.svg" alt=""></button>
+                                                </div>
+
+                                          </div>
+                                    </div>
+
+
+                              </div>
+
+                              <div id="form_assign_badge" class="form_assign_badge_container"></div>
+
+                              <div class="form_assign_notice">
+                                    <p class="d-none">This field is required</p>
+                              </div>
+                        </div>
+
+                  </div>
+                  <div class="hr_line_container">
+                        <hr class="hr_line">
+                  </div>
+
+                  <div class="addtask_right_form">
+                        <div class="form_input_container">
+                              <div class="form_input_label">
+                                    <h4>Due date<span class="required">*</span></h4>
+                              </div>
+
+                              <input onclick="removeError('date'), allowCurrentDateOnly()"
+                                    class="form_input_field date_field pointer" type="date" id="date-picker"
+                                    name="datum" required="required">
+
+                              <div class="form_input_notice">
+                                    <p class="d-none" id="date-validation">This field is required</p>
+                              </div>
+                        </div>
+
+                        <div class="prio_container">
+                              <div class="prio_label">
+                                    <h4>Priority<span class="required">*</span></h4>
+                              </div>
+                              <div class="prio_button_container" onclick="removeError('prio')">
+                                    <button class="prio_button" type="button" id="urgent" onclick="setPriority(1)">
+                                          <p>Urgent</p><img src="/assets/img/Prio_alta.svg" alt="">
+                                    </button>
+                                    <button class="prio_button medium-checked" type="button" id="medium"
+                                          onclick="setPriority(2)">
+                                          <p>Medium</p><img src="/assets/img/Prio_media_white.svg" alt="">
+                                    </button>
+                                    <button class="prio_button" type="button" id="low" onclick="setPriority(3)">
+                                          <p>Low</p><img src="/assets/img/Prio_baja.svg" alt="">
+                                    </button>
+
+                              </div>
+                              <div class="form_input_notice">
+                                    <p class="d-none" id="prio-validation">Select a Priority</p>
+                              </div>
+                        </div>
+
+                        <div class="category_container">
+                              <div class="category_label">
+                                    <h4>Category<span class="required">*</span></h4>
+                              </div>
+
+                              <div class="category_field_dropdown_container pointer" onclick="removeError('category')"
+                                    id="category_field_dropdown_container">
+                                    <div class="category_field" id="category_field" onclick="toggleCategoryDropdown()">
+                                          <p id="category_field_title" class="category_field_title">Select task category
+                                          </p>
+                                          <img src="/assets/img/arrow_drop_downaa.svg" alt="">
+                                    </div>
+                                    <ul id="category_dropdown" class="category_dropdown">
+
+                                    </ul>
+                              </div>
+
+                              <div class="form_input_notice">
+                                    <p id="category-validation" class="d-none">This field is required</p>
+                              </div>
+                        </div>
+
+
+                        <div class="subtask_container">
+                              <div class="subtask_label">
+                                    <h4>Subtasks</h4>
+                              </div>
+
+                              <div class="subtask_input_container" id="subtask_input_container">
+                                    <input onclick="addEventlistenerToSubtaskField(), showSubtaskInputIcons()"
+                                          class="subtask_input" id="subtask_input" name="subtaskt_title"
+                                          placeholder="Add subtask" id="subtask_input">
+                                    <div id="subtask_input_icon" class="subtask_input_icon pointer">
+                                          <img onclick="addEventlistenerToSubtaskField(), showSubtaskInputIcons()"
+                                                src="/assets/img/subtask_add.svg" alt="">
+                                    </div>
+                              </div>
+
+                              <ul class="ul_subtask_task" id="ul_subtask_task">
+
+                              </ul>
+
+                              <div class="subtask_notice">
+                                    <p class="d-none">This field is required</p>
+                              </div>
+                        </div>
+
+                  </div>
+            </div>
+
+            <div class="container-create-clear">
+                  <p><span class="required">*</span>This field is required.
+                  <div class="button-container-create-clear">
+                        <button type="button" class="secondary-button add-task" onclick="deleteTask()">Clear</button>
+                        <button type="button" class="primary-button add-task" onclick="validateFormAddTask()">Create
+                              Task</button>
+                  </div>
+            </div>
+      </form>
+
+</body>

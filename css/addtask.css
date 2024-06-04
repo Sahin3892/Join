@@ -1,0 +1,2931 @@
+:root {
+      --form-field-focus-background: #DEECF4;
+}
+
+.addtask_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+}
+
+body {
+      margin: 0;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 100px !important;
+      overflow: scroll;
+      overflow-x: hidden;
+}
+
+h4 {
+      margin-top: 8px;
+}
+
+.add-task-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+
+}
+
+.add-task-overlay {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      background-color: #575757d1;
+      position: fixed;
+      width: calc(100% - 232px) !important;
+      height: calc(100% - 88px);
+      top: 88px;
+      left: 232px;
+
+}
+
+
+
+
+
+#add-task-overlay-container {
+      max-width: 988px !important;
+      height: 700px;
+      max-height: 800px;
+      width: 80dvw;
+      background-color: #f4f4f4;
+      padding: 48px;
+      border-radius: 30px;
+      overflow-y: scroll;
+
+
+
+
+
+}
+
+
+#add-task-page-body {
+      margin-left: 16px;
+}
+
+#add-task-page {
+      margin-left: 5dvw !important;
+      margin-right: 5dvw !important;
+
+}
+
+
+.form-error {
+      border-color: #FF3D00 !important;
+      border-width: 1px !important;
+      border-style: solid !important;
+
+}
+
+
+
+
+.form_container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+      margin-top: 32px;
+      height: 90%;
+      align-items: flex-start;
+      width: 100%;
+
+}
+
+.form-elements-container {
+      display: flex;
+      gap: 32px;
+      align-self: stretch;
+      width: 100%;
+
+
+
+
+}
+
+
+
+
+.addtask_left_form,
+.addtask_right_form {
+      width: 100%;
+}
+
+.addtask_header h1 {
+      font-size: 48px;
+}
+
+.addtask_header img {
+      height: 48px;
+      width: 48px;
+}
+
+#add-task-page-body {
+
+      display: flex;
+      align-self: stretch;
+      margin: 0;
+      flex-direction: column;
+      margin-left: 232px;
+      margin-right: 1vw;
+
+}
+
+#add-task-page {
+      width: 70%;
+}
+
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||  Input Field  ||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+.form_input_container {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+
+}
+
+.form_input_label span {
+      color: #2A3647
+}
+
+
+.form_input_field {
+      display: flex;
+      padding: 0px 21px;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 10px;
+      border: 1px solid #D1D1D1;
+      background: #FFF;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      transition: 125ms ease-in;
+      height: 48px;
+
+
+}
+
+
+
+.form_input_field::placeholder {
+      color: #D1D1D1;
+
+}
+
+.form_input_field:hover {
+      border: 1px solid;
+      border-color: #29ABE2;
+      transition: 125ms ease-out;
+}
+
+.form_input_field:focus-visible {
+
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: #DEECF4;
+      transition: 125ms ease-out;
+
+
+}
+
+.form_input_notice {
+      height: 18px;
+
+
+}
+
+.form_input_notice p {
+      font-size: 14px;
+      color: #FF8190;
+
+}
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||||  textarea  ||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+.form_textarea_container {
+      display: flex;
+      flex-direction: column;
+      transition: 125ms ease-in;
+      align-self: stretch;
+
+}
+
+.form_textarea_label span {
+      color: #FF8190;
+}
+
+
+.form_textarea_field {
+      display: flex;
+      padding: 12px 21px;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 10px;
+      border: 1px solid #D1D1D1;
+      background: #FFF;
+      font-size: 20px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      transition: 125ms ease-in;
+      font-family: "inter";
+      min-height: 122px;
+
+}
+
+
+.form_textarea_field::placeholder {
+      color: #D1D1D1;
+
+}
+
+.form_textarea_field:hover {
+      border: 1px solid;
+      border-color: #29ABE2;
+      transition: 125ms ease-out;
+}
+
+.form_textarea_field:focus-visible {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: #DEECF4;
+      transition: 125ms ease-out;
+
+
+}
+
+.form_textarea_notice {
+      height: 18px;
+}
+
+.form_textarea_notice p {
+      font-size: 14px;
+      color: #FF8190;
+}
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+||||||||| assign contact dropdown |||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+.form_assign_container {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+
+
+}
+
+.form_assign_label span {
+      color: #FF8190;
+}
+
+
+.form_assign_field {
+      display: flex;
+      background-color: #00000000;
+      align-items: center;
+      align-self: stretch;
+      border: none;
+      font-size: 20px;
+      transition: 125ms ease-in;
+      flex-grow: 1;
+      z-index: 2;
+
+}
+
+
+.form_assign_field::placeholder {
+      color: #D1D1D1;
+
+}
+
+.form_assign_field_container:hover {
+      border: 1px solid;
+      border-color: #29ABE2;
+      transition: 125ms ease-out;
+}
+
+.form_assign_field_container:focus-visible {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: var(--form-field-focus-background);
+      transition: 125ms ease-out;
+
+}
+
+.form_assign_field_container:focus-within {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: var(--form-field-focus-background);
+      transition: 125ms ease-out;
+
+}
+
+.form_assign_field:focus-visible {
+      border: none;
+      outline: none;
+      background-color: rgba(41, 170, 226, 0);
+}
+
+.form_assign_field:focus-within {
+      border: none;
+      outline: none;
+      background-color: rgba(41, 170, 226, 0);
+}
+
+
+.form_assign_notice {
+      height: 18px;
+}
+
+.form_assign_notice p {
+      font-size: 14px;
+      color: #FF8190;
+}
+
+.form_assign_field_list_container {
+      position: relative;
+}
+
+
+
+.form_assign_field_container {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #D1D1D1;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      transition: 125ms ease-in;
+      justify-content: space-between;
+      padding: 12px 15px 12px 21px;
+      background-color: #fff;
+      z-index: 2 !important;
+      position: relative;
+
+
+
+}
+
+.assign_list_container {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      /* Kinder (ul und button) vertikal anordnen */
+      align-items: center;
+      /* Zentriert die Kinder horizontal */
+      justify-content: start;
+      /* Ausrichtung der Kinder am Anfang des Containers */
+      z-index: 10;
+}
+
+
+
+
+.form-add-task-btn {
+      color: #ffffff;
+      background-color: #2A3647;
+      border: none;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 21px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 120%;
+      /* 25.2px */
+      width: 96%;
+
+      height: 48px !important;
+      gap: 12px;
+      transition: 125ms;
+      margin: 16px 16px 16px 16px;
+}
+
+.form-add-task-btn:hover {
+      background-color: #29ABE2;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.form-add-task-btn:active {
+      background-color: #091931;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.assign_ul_button {
+      position: absolute;
+      width: 100%;
+      background-color: #fff;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+      z-index: 1;
+}
+
+.assign_add_contact {
+      z-index: 10;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffffff;
+      height: 80px;
+}
+
+.form_assign_dropdown {
+      background-color: #FFF;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 2px;
+      margin: 0;
+      margin-top: -10px;
+      padding: 0px 0px 0px 0px;
+      max-height: 180px;
+      width: 100%;
+      z-index: 10 !important;
+      overflow: scroll;
+}
+
+.form_assign_dropdown li {
+      display: flex;
+      align-self: stretch;
+      flex-grow: 1;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding: 4px 16px 4px 16px;
+      height: 52px !important;
+      transition: 125ms ease-out;
+}
+
+
+.form_assign_dropdown li:first-child {
+      margin-top: 16px;
+
+
+}
+
+.form_assign_dropdown li:hover {
+      background-color: var(--form-field-focus-background);
+      transition: 125ms ease-in;
+
+}
+
+.selected {
+      background-color: #2A3647;
+      color: #fff;
+}
+
+.selected:hover {
+      background-color: #091931 !important;
+}
+
+
+.add-contact {
+      display: flex;
+      width: auto;
+      height: 40px;
+      margin: 8px 16px 8px 16px;
+}
+
+
+.form_assign_name {
+      flex-grow: 1;
+      display: flex;
+
+}
+
+.form_assign_error {
+      color: #FF8190;
+      text-align: left;
+      font-weight: 500;
+}
+
+.form_assign_badge {
+      height: 36px !important;
+      width: 36px !important;
+      border-radius: 200px;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #fff;
+      fill: #00BEE8;
+      stroke-width: 2px;
+      stroke: #FFF;
+      background-color: #00BEE8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+
+}
+
+.form_assign_badge_container {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+}
+
+
+
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||| Due Date Field |||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+
+#date-picker {
+      color: #d1d1d1;
+      font-family: 'Inter', sans-serif;
+      display: block;
+
+
+}
+
+
+#date-picker:valid {
+      color: black;
+}
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||| HR-LINE |||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+.hr_line {
+      height: 90%;
+      width: 1px;
+      background-color: #D1D1D1;
+      border: none;
+      border-radius: 50px;
+}
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+||||||||||||||| Priorities ||||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+.prio_container {
+      align-self: stretch;
+}
+
+.prio_button_container {
+      display: flex;
+      gap: 16px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+}
+
+
+
+.prio_button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      height: 48px;
+      flex: 1 0 0;
+      border-radius: 10px;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+      background-color: #fff;
+      border: none;
+      transition: 75ms ease-out;
+      font-weight: 400;
+
+
+
+
+}
+
+.status-active {
+      background-color: #29ABE2 !important;
+      color: #fff;
+
+
+}
+
+.prio_button:hover {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      transition: 75ms ease-in;
+}
+
+.prio_button p {
+      font-size: 18px;
+
+      font-style: normal;
+}
+
+.prio_button img {
+      height: auto;
+      width: 24px;
+}
+
+.urgent-checked {
+      color: #fff;
+      background-color: #FF3D00;
+      font-weight: 400;
+      transition: 75ms;
+}
+
+.medium-checked {
+      color: #fff;
+      background-color: #FFA800;
+      font-weight: 400;
+      transition: 75ms;
+}
+
+.low-checked {
+      color: #fff;
+      background-color: #7AE229;
+      font-weight: 400;
+      transition: 75ms;
+}
+
+
+/*
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||| Category Dropdown ||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+.category_container {
+      display: flex;
+      flex-direction: column;
+
+      flex-grow: 1;
+
+      align-self: stretch;
+}
+
+.required {
+      color: #FF8190;
+}
+
+.category_field_dropdown_container {
+      position: relative;
+}
+
+.category_field:hover {
+      border: 1px solid;
+      border-color: #29ABE2;
+      transition: 125ms ease-out;
+}
+
+.category_field:focus-visible,
+.category_field:focus-within,
+.category_field:focus {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: #DEECF4;
+      transition: 125ms ease-out;
+}
+
+.category_field:focus-within {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: #DEECF4;
+      transition: 125ms ease-out;
+}
+
+.category_field {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #D1D1D1;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      transition: 125ms ease-in;
+      justify-content: space-between;
+      padding: 12px 15px 12px 21px;
+      background-color: #fff;
+      z-index: 2 !important;
+      position: relative;
+      font-size: 20px;
+
+
+}
+
+
+
+
+.category_dropdown {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      background-color: #FFF;
+      margin: 0;
+      margin-top: -10px;
+      width: 100%;
+      z-index: 1 !important;
+      flex-grow: 1;
+      padding: 0;
+
+      box-sizing: border-box;
+}
+
+.category_dropdown li {
+      display: flex;
+      align-self: stretch;
+      flex-grow: 1;
+      justify-content: space-between;
+      padding-left: 21px;
+      padding-right: 21px;
+      align-items: center;
+      height: 64px;
+      font-size: 20px;
+      border: none;
+
+}
+
+
+.category-list:hover {
+      background-color: #DEECF4;
+}
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||| Subtask Input ||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+.subtask_container {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      max-height: 250px;
+
+
+}
+
+.subtask_input_container {
+      display: flex;
+      border-radius: 10px;
+      border: 1px solid #D1D1D1;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      transition: 125ms ease-in;
+      justify-content: space-between;
+      padding: 8px 15px 8px 21px;
+      background-color: #fff;
+      position: relative;
+
+}
+
+
+.subtask_input_container:hover {
+      border: 1px solid;
+      border-color: #29ABE2;
+      transition: 125ms ease-out;
+}
+
+
+
+.subtask_input_container:focus-within {
+      border: 1px solid;
+      border-color: #29ABE2;
+      outline: none;
+      background-color: #DEECF4;
+      transition: 125ms ease-out;
+
+}
+
+
+.subtask_input {
+      display: flex;
+      background-color: #00000000;
+      align-items: center;
+      align-self: stretch;
+      border: none;
+      font-size: 20px;
+      transition: 125ms ease-in;
+      flex-grow: 1;
+      z-index: 0;
+
+}
+
+.subtask_input::placeholder {
+      color: #D1D1D1;
+
+}
+
+.subtask_input:focus {
+      border: none;
+      outline: none;
+
+}
+
+
+.subtask_input_icon {
+      display: flex;
+      gap: 2px;
+}
+
+
+.subtask_input_icon img {
+      width: 24px;
+      height: 24px;
+      padding: 4px;
+      transition: 150ms ease-out;
+}
+
+.subtask_input_icon img:hover {
+      background-color: #bcbcbc;
+      border-radius: 500px;
+      transition: 150ms ease-in;
+}
+
+.subtask_input_icon hr {
+      margin: 0;
+      border-style: solid;
+      border-color: #bcbcbc;
+      border-radius: 500px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+
+}
+
+.ul_subtask_task {
+      list-style-type: none;
+      font-size: 16px;
+      margin-top: 12px;
+      padding-left: 0px;
+      display: flex;
+      flex-direction: column;
+      height: 132px;
+      overflow-y: auto;
+      overflow-x: hidden;
+
+}
+
+
+
+.li_subtask_task {
+      padding: 0;
+      display: flex;
+
+      align-items: center;
+      gap: 8px;
+      padding-left: 16px;
+      min-height: 36px !important;
+      max-height: 36px !important;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: #bcbcbc;
+      transition: 150ms ease-out;
+}
+
+.li_subtask_task span {
+      flex-grow: 1;
+}
+
+.li_subtask_task input {
+      border: none;
+      background-color: #00000000;
+      font-size: 16px;
+      flex-grow: 1;
+}
+
+.subtask-edit-input:focus,
+.subtask-edit-input:active,
+.subtask-edit-input:focus-visible,
+.subtask-edit-input:focus-within,
+.subtask-edit-input:target {
+
+
+      outline: none;
+}
+
+
+
+
+.bulletpoint {
+
+      flex-shrink: 0;
+      width: 8px !important;
+      height: 8px !important;
+}
+
+.li_subtask_task:last-child {
+      border-style: none;
+}
+
+.li_subtask_task:hover {
+      background-color: #eee;
+      transition: 150ms ease-in;
+}
+
+.li_subtask_icon {
+      display: flex;
+      gap: 2px;
+}
+
+
+.li_subtask_icon img {
+      width: 24px;
+      height: 24px;
+      padding: 2px;
+      transition: 150ms ease-out;
+}
+
+.li_subtask_icon img:hover {
+      background-color: #bcbcbc;
+      border-radius: 500px;
+      transition: 150ms ease-in;
+}
+
+.li_subtask_icon hr {
+      margin: 0;
+      border-style: solid;
+      border-color: #bcbcbc;
+      border-radius: 500px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+
+}
+
+.subtask-active {
+      border: none;
+      border-bottom-color: #29ABE2;
+      border-bottom-style: solid;
+      border-bottom-width: 2px;
+}
+
+.d-none {
+      display: none;
+}
+
+
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||| Create Clear Buttons |||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+.container-create-clear {
+
+
+      display: flex;
+      align-self: stretch;
+      align-items: flex-end;
+
+}
+
+.button-container-create-clear {
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 1;
+      height: 100%;
+      gap: 24px;
+      align-self: stretch;
+      align-items: flex-end;
+
+
+}
+
+
+
+
+/* 
+|||||||||||||||||||||||||||||||||||||||||||||
+|||||||||||||| Notification |||||||||||||||||
+|||||||||||||||||||||||||||||||||||||||||||||  
+*/
+
+
+.add-task-success-container {
+      width: calc(100% - 232px);
+      height: 100%;
+      pointer-events: none;
+      z-index: 400;
+      position: fixed;
+      top: 0px;
+      left: 232px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+
+}
+
+.add-task-success {
+      opacity: 0;
+      position: absolute;
+      z-index: 20;
+      background-color: #2A3647;
+      height: 140px !important;
+      width: 300px !important;
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      gap: 24px;
+      transition: opacity 0.3s ease-in;
+      /* Animation hinzufügen */
+
+}
+
+.add-task-opak {
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+      /* Animation hinzufügen */
+
+}
+
+
+/* 2xl @media (min-width: 1536px) {  } */
+
+/* xl  */
+@media (max-width: 1600px) {
+      #add-task-page {
+            margin-left: 232px !important;
+            margin-right: 0vw !important;
+            ;
+      }
+}
+
+/* lg  */
+@media (max-width: 1600px) {
+      :root {
+            --form-field-focus-background: #DEECF4;
+      }
+
+      .addtask_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+      }
+
+      body {
+            margin: 0;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 10px
+      }
+
+      .add-task-body {
+            display: flex;
+            flex-direction: column;
+      }
+
+      .add-task-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            background-color: #575757d1;
+            position: fixed;
+
+            width: calc(100% - 232px);
+            height: calc(100% - 88px);
+            top: 88px;
+      }
+
+
+
+
+
+
+      #add-task-overlay-container {
+            width: 60vw;
+            max-width: 988px !important;
+            height: 86%;
+
+            background-color: #f4f4f4;
+
+            border-radius: 30px;
+      }
+
+
+
+      .form_container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: space-between;
+            margin-top: 32px;
+            height: 90%;
+            align-items: flex-start;
+
+            width: 100%;
+
+      }
+
+      .form-elements-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            align-self: stretch;
+            overflow-y: scroll;
+            padding-right: 24px;
+
+
+      }
+
+
+
+      .addtask_left_form,
+      .addtask_right_form {
+            flex-grow: 1;
+            width: 100%;
+      }
+
+      .addtask_header h1 {
+            font-size: 48px;
+      }
+
+      .addtask_header img {
+            height: 48px;
+            width: 48px;
+      }
+
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||  Input Field  ||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .form_input_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+      }
+
+      .form_input_label span {
+            color: #FF8190;
+      }
+
+
+      .form_input_field {
+            display: flex;
+            padding: 0px 21px;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            background: #FFF;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            height: 48px;
+
+      }
+
+
+
+      .form_input_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_input_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_input_field:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+
+      }
+
+      .form_input_notice {
+            height: 18px;
+      }
+
+      .form_input_notice p {
+            font-size: 14px;
+            color: #FF8190;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||||  textarea  ||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .form_textarea_container {
+            display: flex;
+            flex-direction: column;
+            transition: 125ms ease-in;
+            align-self: stretch;
+
+      }
+
+      .form_textarea_label span {
+            color: #FF8190;
+      }
+
+
+      .form_textarea_field {
+            display: flex;
+            padding: 12px 21px;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            background: #FFF;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            font-family: "inter";
+            min-height: 122px;
+
+      }
+
+
+      .form_textarea_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_textarea_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_textarea_field:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+
+      }
+
+      .form_textarea_notice {
+            height: 18px;
+      }
+
+      .form_textarea_notice p {
+            font-size: 14px;
+            color: #FF8190;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||| assign contact dropdown |||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .form_assign_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+
+
+      }
+
+      .form_assign_label span {
+            color: #FF8190;
+      }
+
+
+      .form_assign_field {
+            display: flex;
+            background-color: #00000000;
+            align-items: center;
+            align-self: stretch;
+            border: none;
+            font-size: 20px;
+            transition: 125ms ease-in;
+            flex-grow: 1;
+            z-index: 2;
+
+      }
+
+
+      .form_assign_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_assign_field_container:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_assign_field_container:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: var(--form-field-focus-background);
+            transition: 125ms ease-out;
+
+      }
+
+      .form_assign_field_container:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: var(--form-field-focus-background);
+            transition: 125ms ease-out;
+
+      }
+
+      .form_assign_field:focus-visible {
+            border: none;
+            outline: none;
+            background-color: rgba(41, 170, 226, 0);
+      }
+
+      .form_assign_field:focus-within {
+            border: none;
+            outline: none;
+            background-color: rgba(41, 170, 226, 0);
+      }
+
+
+      .form_assign_notice {
+            height: 18px;
+      }
+
+      .form_assign_notice p {
+            font-size: 14px;
+            color: #FF8190;
+      }
+
+      .form_assign_field_list_container {
+            position: relative;
+      }
+
+      .form_assign_field_container {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 12px 15px 12px 21px;
+            background-color: #fff;
+            z-index: 2 !important;
+            position: relative;
+
+
+
+      }
+
+
+      .selected {
+            background-color: #2A3647;
+            color: #fff;
+      }
+
+      .selected:hover {
+            background-color: #091931 !important;
+      }
+
+
+
+      .form_assign_name {
+            flex-grow: 1;
+            display: flex;
+
+      }
+
+      .form_assign_error {
+            color: #FF8190;
+            text-align: left;
+            font-weight: 500;
+      }
+
+
+
+      .form_assign_badge_container {
+            display: flex;
+            gap: 8px;
+            height: auto;
+            padding-top: 0px;
+            margin-top: 8px
+      }
+
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Due Date Field |||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+
+      #date-picker {
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+
+      }
+
+
+      #date-picker:valid {
+            color: black;
+      }
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||||| HR-LINE |||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .hr_line_container {
+
+            display: none;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||| Priorities ||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .prio_container {
+            align-self: stretch;
+      }
+
+      .prio_button_container {
+            display: flex;
+            gap: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+      }
+
+
+
+      .prio_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            height: 48px;
+            flex: 1 0 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+            background-color: #fff;
+            border: none;
+            transition: 75ms ease-out;
+            font-weight: 400;
+
+
+
+
+      }
+
+      .prio_button:hover {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: 75ms ease-in;
+      }
+
+      .prio_button p {
+            font-size: 18px;
+
+            font-style: normal;
+      }
+
+      .prio_button img {
+            height: auto;
+            width: 24px;
+      }
+
+      .urgent-checked {
+            color: #fff;
+            background-color: #FF3D00;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+      .medium-checked {
+            color: #fff;
+            background-color: #FFA800;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+      .low-checked {
+            color: #fff;
+            background-color: #7AE229;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||| Category Dropdown ||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .category_container {
+            display: flex;
+            flex-direction: column;
+
+            flex-grow: 1;
+
+            align-self: stretch;
+      }
+
+      .required {
+            color: #FF8190;
+      }
+
+      .category_field_dropdown_container {
+            position: relative;
+      }
+
+      .category_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .category_field:focus-visible,
+      .category_field:focus-within,
+      .category_field:focus {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+      }
+
+      .category_field:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+      }
+
+      .category_field {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 12px 15px 12px 21px;
+            background-color: #fff;
+            z-index: 2 !important;
+            position: relative;
+            font-size: 20px;
+
+
+      }
+
+
+
+
+      .category_dropdown {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            background-color: #FFF;
+            margin: 0;
+            margin-top: -10px;
+            width: 100%;
+            z-index: 1 !important;
+            flex-grow: 1;
+            padding: 0;
+
+            box-sizing: border-box;
+      }
+
+      .category_dropdown li {
+            display: flex;
+            align-self: stretch;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding-left: 21px;
+            padding-right: 21px;
+            align-items: center;
+            height: 64px;
+            font-size: 20px;
+
+      }
+
+
+      .category-list:hover {
+            background-color: #DEECF4;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Subtask Input ||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .subtask_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+      }
+
+      .subtask_input_container {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 8px 15px 8px 21px;
+            background-color: #fff;
+            position: relative;
+      }
+
+      .subtask_input_container:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+
+
+      .subtask_input_container:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+      }
+
+
+      .subtask_input {
+            display: flex;
+            background-color: #00000000;
+            align-items: center;
+            align-self: stretch;
+            border: none;
+            font-size: 20px;
+            transition: 125ms ease-in;
+            flex-grow: 1;
+            z-index: 0;
+
+      }
+
+      .subtask_input::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .subtask_input:focus {
+            border: none;
+            outline: none;
+
+      }
+
+
+      .subtask_input_icon {
+            display: flex;
+            gap: 2px;
+      }
+
+
+      .subtask_input_icon img {
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            transition: 150ms ease-out;
+      }
+
+      .subtask_input_icon img:hover {
+            background-color: #bcbcbc;
+            border-radius: 500px;
+            transition: 150ms ease-in;
+      }
+
+      .subtask_input_icon hr {
+            margin: 0;
+            border-style: solid;
+            border-color: #bcbcbc;
+            border-radius: 500px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+      }
+
+
+      .li_subtask_task {
+            padding: 0;
+            display: flex;
+
+            align-items: center;
+            gap: 8px;
+            padding-left: 16px;
+            min-height: 36px !important;
+            max-height: 36px !important;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #bcbcbc;
+            transition: 150ms ease-out;
+      }
+
+      .li_subtask_task span {
+            flex-grow: 1;
+      }
+
+      .li_subtask_task img {
+            width: 8px;
+      }
+
+      .li_subtask_task:last-child {
+            border-style: none;
+      }
+
+      .li_subtask_task:hover {
+            background-color: #eee;
+            transition: 150ms ease-in;
+      }
+
+      .li_subtask_icon {
+            display: flex;
+            gap: 2px;
+      }
+
+
+      .li_subtask_icon img {
+            width: 24px;
+            height: 24px;
+            padding: 2px;
+            transition: 150ms ease-out;
+      }
+
+      .li_subtask_icon img:hover {
+            background-color: #bcbcbc;
+            border-radius: 500px;
+            transition: 150ms ease-in;
+      }
+
+      .li_subtask_icon hr {
+            margin: 0;
+            border-style: solid;
+            border-color: #bcbcbc;
+            border-radius: 500px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+      }
+
+      .d-none {
+            display: none;
+      }
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Create Clear Buttons |||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .container-create-clear {
+
+
+            display: flex;
+            align-self: stretch;
+            align-items: flex-end;
+            padding-right: 24px;
+
+      }
+
+      .button-container-create-clear {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            height: 100%;
+            gap: 24px;
+            align-self: stretch;
+            align-items: flex-end;
+
+
+      }
+
+      .add-task-page {
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+      }
+
+      #add-task-page {
+            width: 94%;
+      }
+
+}
+
+@media (max-width: 1024px) {
+
+      body {
+            margin-bottom: 160px !important;
+      }
+
+      ::-webkit-scrollbar {
+            display: none;
+            /* Verstecke die Scrollbar */
+      }
+
+      /* Optional: Für Internet Explorer, Edge */
+      body {
+            -ms-overflow-style: none;
+            /* IE und Edge */
+      }
+
+      /* Optional: Für Firefox */
+      body {
+            scrollbar-width: none;
+            /* Firefox */
+      }
+
+      .add-task-overlay {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            background-color: #575757d1;
+            position: fixed;
+            width: 100% !important;
+            height: calc(100% - 72px - 80px);
+
+            margin-left: 0px;
+            top: 72px;
+            left: 0;
+      }
+
+
+
+
+      #add-task-overlay-container {
+            width: 80vw;
+            max-width: 988px !important;
+            height: 84%;
+
+            background-color: #f4f4f4;
+            border-radius: 30px;
+      }
+
+      .add-task-success-container {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 400;
+            position: fixed;
+            top: 0px;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+
+      }
+
+      .form_container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: space-between;
+            margin-top: 32px;
+            height: 90%;
+            align-items: flex-start;
+
+            width: 100%;
+
+      }
+
+      .form-elements-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            align-self: stretch;
+            overflow-y: scroll;
+            padding-right: 24px;
+
+
+      }
+
+
+}
+
+
+
+
+
+/* md  */
+@media (max-width: 768px) {
+      body {
+            margin-bottom: 160px !important;
+      }
+
+      #add-task-page {
+            margin-left: 4dvw !important;
+            margin-right: 3dvw !important;
+
+      }
+}
+
+/* sm  */
+@media (max-width: 640px) {
+      body {
+            margin-bottom: 160px !important;
+      }
+
+      #add-task-page-body {
+            margin-left: 0px;
+      }
+
+      #add-task-page {
+            margin-left: 40px !important;
+            margin-right: 32px !important;
+
+      }
+
+      :root {
+            --form-field-focus-background: #DEECF4;
+      }
+
+      .addtask_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+      }
+
+      body {
+            margin: 0;
+            margin-left: 10%;
+            margin-right: 10%
+      }
+
+      .add-task-body {
+            display: flex;
+            flex-direction: column;
+      }
+
+      .add-task-overlay {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            background-color: #575757d1;
+            position: fixed;
+            width: 100% !important;
+            height: calc(100% - 72px - 80px);
+
+            margin-left: 0px;
+            top: 72px;
+            left: 0;
+
+
+
+      }
+
+
+
+      #add-task-overlay-container {
+
+            max-width: 988px !important;
+
+            height: 80%;
+            background-color: #f4f4f4;
+
+            border-radius: 30px;
+      }
+
+
+
+
+
+
+      .form_container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            justify-content: space-between;
+            margin-top: 32px;
+            height: 90%;
+            align-items: flex-start;
+
+
+      }
+
+      .form-elements-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            align-self: stretch;
+            overflow-y: scroll;
+
+
+      }
+
+
+
+      .addtask_left_form,
+      .addtask_right_form {
+            flex-grow: 1;
+      }
+
+      .addtask_header h1 {
+            font-size: 40px;
+      }
+
+      .addtask_header img {
+            height: 48px;
+            width: 48px;
+      }
+
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||  Input Field  ||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .form_input_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+      }
+
+      .form_input_label span {
+            color: #FF8190;
+      }
+
+
+      .form_input_field {
+            display: flex;
+            padding: 0px 21px;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            background: #FFF;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            height: 48px;
+
+      }
+
+
+
+      .form_input_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_input_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_input_field:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+
+      }
+
+      .form_input_notice {
+            height: 18px;
+      }
+
+      .form_input_notice p {
+            font-size: 12px;
+            color: #FF8190;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||||  textarea  ||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .form_textarea_container {
+            display: flex;
+            flex-direction: column;
+            transition: 125ms ease-in;
+            align-self: stretch;
+
+      }
+
+      .form_textarea_label span {
+            color: #FF8190;
+      }
+
+
+      .form_textarea_field {
+            display: flex;
+            padding: 12px 21px;
+            align-items: center;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            background: #FFF;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            font-family: "inter";
+            min-height: 122px;
+
+      }
+
+
+      .form_textarea_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_textarea_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_textarea_field:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+
+      }
+
+      .form_textarea_notice {
+            height: 18px;
+      }
+
+      .form_textarea_notice p {
+            font-size: 12px;
+            color: #FF8190;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||| assign contact dropdown |||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .form_assign_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+
+
+      }
+
+      .form_assign_label span {
+            color: #FF8190;
+      }
+
+
+      .form_assign_field {
+            display: flex;
+            background-color: #00000000;
+            align-items: center;
+            align-self: stretch;
+            border: none;
+            font-size: 16px;
+            transition: 125ms ease-in;
+            flex-grow: 1;
+            z-index: 2;
+
+      }
+
+
+      .form_assign_field::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .form_assign_field_container:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .form_assign_field_container:focus-visible {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: var(--form-field-focus-background);
+            transition: 125ms ease-out;
+
+      }
+
+      .form_assign_field_container:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: var(--form-field-focus-background);
+            transition: 125ms ease-out;
+
+      }
+
+      .form_assign_field:focus-visible {
+            border: none;
+            outline: none;
+            background-color: rgba(41, 170, 226, 0);
+      }
+
+      .form_assign_field:focus-within {
+            border: none;
+            outline: none;
+            background-color: rgba(41, 170, 226, 0);
+      }
+
+
+      .form_assign_notice {
+            height: 18px;
+      }
+
+      .form_assign_notice p {
+            font-size: 12px;
+            color: #FF8190;
+      }
+
+      .form_assign_field_list_container {
+            position: relative;
+      }
+
+      .form_assign_field_container {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 12px 15px 12px 21px;
+            background-color: #fff;
+            z-index: 2 !important;
+            position: relative;
+
+
+
+      }
+
+
+
+      .selected {
+            background-color: #2A3647;
+            color: #fff;
+      }
+
+      .selected:hover {
+            background-color: #091931 !important;
+      }
+
+
+
+      .form_assign_name {
+            flex-grow: 1;
+            display: flex;
+
+      }
+
+      .form_assign_error {
+            color: #FF8190;
+            text-align: left;
+            font-weight: 500;
+      }
+
+
+
+      .form_assign_badge_container {
+            display: flex;
+            gap: 8px;
+            height: auto;
+            padding-top: 0px;
+            margin-top: 8px
+      }
+
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Due Date Field |||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+
+      #date-picker {
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+
+      }
+
+
+      #date-picker:valid {
+            color: black;
+      }
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||||| HR-LINE |||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .hr_line_container {
+
+            display: none;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   ||||||||||||||| Priorities ||||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .prio_container {
+
+            display: flex;
+            flex-direction: column;
+
+
+
+      }
+
+      .prio_button_container {
+            display: flex;
+            gap: 16px;
+            margin-top: 10px;
+            margin-bottom: 5px;
+
+
+
+
+      }
+
+
+
+      .prio_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            min-height: 48px;
+            flex: 1 0 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.10);
+            background-color: #fff;
+            border: none;
+            transition: 75ms ease-out;
+            font-weight: 400;
+
+
+
+
+      }
+
+      .prio_button:hover {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            transition: 75ms ease-in;
+      }
+
+      .prio_button p {
+            font-size: 16px;
+
+            font-style: normal;
+      }
+
+      .prio_button img {
+            height: auto;
+            width: 16px;
+      }
+
+      .urgent-checked {
+            color: #fff;
+            background-color: #FF3D00;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+      .medium-checked {
+            color: #fff;
+            background-color: #FFA800;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+      .low-checked {
+            color: #fff;
+            background-color: #7AE229;
+            font-weight: 400;
+            transition: 75ms;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||| Category Dropdown ||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .category_container {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+
+            align-self: stretch;
+      }
+
+      .required {
+            color: #FF8190;
+      }
+
+      .category_field_dropdown_container {
+            position: relative;
+      }
+
+      .category_field:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+      .category_field:focus-visible,
+      .category_field:focus-within,
+      .category_field:focus {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+      }
+
+      .category_field:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+      }
+
+      .category_field {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 12px 15px 12px 21px;
+            background-color: #fff;
+            z-index: 2 !important;
+            position: relative;
+            font-size: 16px;
+
+
+      }
+
+
+
+
+      .category_dropdown {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            background-color: #FFF;
+            margin: 0;
+            margin-top: -10px;
+            width: 100%;
+            z-index: 1 !important;
+            flex-grow: 1;
+            padding: 0;
+
+            box-sizing: border-box;
+      }
+
+      .category_dropdown li {
+            display: flex;
+            align-self: stretch;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding-left: 21px;
+            padding-right: 21px;
+            align-items: center;
+            height: 64px;
+            font-size: 16px;
+
+      }
+
+
+      .category-list:hover {
+            background-color: #DEECF4;
+      }
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Subtask Input ||||||||||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+      .subtask_container {
+            display: flex;
+            flex-direction: column;
+            align-self: stretch;
+
+
+
+      }
+
+      .subtask_input_container {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #D1D1D1;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            transition: 125ms ease-in;
+            justify-content: space-between;
+            padding: 8px 15px 8px 21px;
+            background-color: #fff;
+            position: relative;
+      }
+
+      .subtask_input_container:hover {
+            border: 1px solid;
+            border-color: #29ABE2;
+            transition: 125ms ease-out;
+      }
+
+
+
+      .subtask_input_container:focus-within {
+            border: 1px solid;
+            border-color: #29ABE2;
+            outline: none;
+            background-color: #DEECF4;
+            transition: 125ms ease-out;
+
+      }
+
+
+      .subtask_input {
+            display: flex;
+            background-color: #00000000;
+            align-items: center;
+            align-self: stretch;
+            border: none;
+            font-size: 16px;
+            transition: 125ms ease-in;
+            flex-grow: 1;
+            z-index: 0;
+
+      }
+
+      .subtask_input::placeholder {
+            color: #D1D1D1;
+
+      }
+
+      .subtask_input:focus {
+            border: none;
+            outline: none;
+
+      }
+
+
+      .subtask_input_icon {
+            display: flex;
+            gap: 2px;
+      }
+
+
+      .subtask_input_icon img {
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            transition: 150ms ease-out;
+      }
+
+      .subtask_input_icon img:hover {
+            background-color: #bcbcbc;
+            border-radius: 500px;
+            transition: 150ms ease-in;
+      }
+
+      .subtask_input_icon hr {
+            margin: 0;
+            border-style: solid;
+            border-color: #bcbcbc;
+            border-radius: 500px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+      }
+
+      .s {
+
+            font-size: 14px;
+
+
+      }
+
+
+      .li_subtask_task {
+            padding: 0;
+            display: flex;
+
+            align-items: center;
+            gap: 8px;
+            padding-left: 16px;
+            min-height: 36px !important;
+            max-height: 36px !important;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: #bcbcbc;
+            transition: 150ms ease-out;
+      }
+
+      .li_subtask_task span {
+            flex-grow: 1;
+      }
+
+      .li_subtask_task img {
+            width: 8px;
+      }
+
+      .li_subtask_task:last-child {
+            border-style: none;
+      }
+
+      .li_subtask_task:hover {
+            background-color: #eee;
+            transition: 150ms ease-in;
+      }
+
+      .li_subtask_icon {
+            display: flex;
+            gap: 2px;
+      }
+
+
+      .li_subtask_icon img {
+            width: 24px;
+            height: 24px;
+            padding: 2px;
+            transition: 150ms ease-out;
+      }
+
+      .li_subtask_icon img:hover {
+            background-color: #bcbcbc;
+            border-radius: 500px;
+            transition: 150ms ease-in;
+      }
+
+      .li_subtask_icon hr {
+            margin: 0;
+            border-style: solid;
+            border-color: #bcbcbc;
+            border-radius: 500px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+      }
+
+      .d-none {
+            display: none;
+      }
+
+
+
+
+      /* 
+   |||||||||||||||||||||||||||||||||||||||||||||
+   |||||||||||||| Create Clear Buttons |||||||||
+   |||||||||||||||||||||||||||||||||||||||||||||  
+   */
+
+      .container-create-clear {
+
+
+            display: flex;
+            align-self: stretch;
+            align-items: flex-start;
+            padding-right: 24px;
+            flex-direction: column-reverse;
+            gap: 24px;
+
+      }
+
+      .button-container-create-clear {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+            height: 100%;
+            gap: 24px;
+            align-self: stretch;
+            align-items: flex-end;
+
+
+      }
+
+      .add-task {
+            display: flex;
+            align-self: stretch;
+            flex-grow: 1;
+      }
+}
+
+@media (max-width: 460px) {
+
+      .add-task-overlay {
+            width: 100% !important;
+            height: 100%;
+            top: 0;
+            z-index: 666;
+
+
+            padding-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      }
+
+      #add-task-overlay-container {
+            padding: 0;
+            height: 100%;
+            max-height: 2000px;
+            width: 100%;
+            border-radius: 0;
+            margin-bottom: 0px;
+            flex-grow: 1;
+      }
+
+
+      .form_container {
+            margin-top: 16px;
+            gap: 16px;
+            height: calc(100% - 96px);
+            justify-content: center;
+            width: calc(100% - 32px);
+            margin-left: 16px;
+            margin-right: 16px;
+
+
+      }
+
+
+
+      #add-task-page {
+            margin-left: 32px !important;
+            margin-right: 0px !important;
+            margin-bottom: 160px;
+
+      }
+
+      .primary-button,
+      .secondary-button {
+            font-size: 16px;
+      }
+
+      .prio_button_container {
+            gap: 8px;
+      }
+
+      .prio_button p {
+            font-size: 14px;
+      }
+
+
+      .subtask_container {
+            height: auto;
+            max-height: 3000px;
+      }
+
+
+      .container-create-clear {
+            gap: 12px;
+            height: auto
+      }
+
+      .addtask_header {
+            padding: 0;
+            margin: 0;
+            margin-top: 16px;
+
+      }
+
+      .form-elements-container {
+            padding: 0;
+            height: 100%;
+            width: 100%;
+      }
+
+
+
+      .form_container,
+      .container-create-clear {
+            padding: 0;
+      }
+
+      ::-webkit-scrollbar {
+            display: none;
+            /* Verstecke die Scrollbar */
+      }
+
+      * {
+            scrollbar-width: none;
+      }
+
+      .add-task-success {
+            width: 220px !important;
+            border-radius: 8px !important;
+            flex-direction: column !important;
+      }
+
+}
+
+
+
+.add-task-page {
+      margin-top: 140px;
+      margin-left: 232px;
+}
+
+.d-none {
+      display: none;
+}

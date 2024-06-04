@@ -1,0 +1,149 @@
+
+
+.edit-task-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      background-color: #575757d1;
+      position: fixed;
+      width: calc(100% - 232px);
+      height: calc(100% - 88px);
+      top: 88px;
+      left: 232px;
+      overflow: hidden;
+}
+
+.edit-task-wrapper {
+      width: 600px;
+      height: 80%;
+      background-color: #f4f4f4;
+      border-radius: 30px;
+      padding: 32px;
+      padding-right: 16px;
+      overflow-y: hidden;
+      display: flex;
+      
+}
+
+.edit-task-container {
+
+      display: flex;
+      flex-direction: column;
+      /* Stellt sicher, dass die Kinder vertikal angeordnet werden */
+      align-items: flex-start;
+      
+      
+      width: 100%;
+      padding-right: 24px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      gap: 12px;
+      
+
+}
+
+.category-note{
+      color: #6a6a6a !important;
+}
+
+.category-edit-task{
+      background-color: #eeeeee;
+      color: #6a6a6a;
+      cursor: not-allowed;
+}
+
+.category-edit-task:hover{
+      border-color: #D1D1D1;
+}
+
+.category-label-edit{
+      color: #6a6a6a !important;
+}
+
+
+.edit-button-container {
+      display: flex;
+      justify-content: flex-end;
+      align-self: stretch;
+}
+
+.edit {
+
+      display: flex;
+      gap: 4px;
+      font-weight: 600;
+
+}
+
+.edit-close {
+      position: sticky;
+}
+
+.d-none {
+      display: none;
+}
+
+
+/* xl  */
+@media (max-width: 1280px) {}
+
+/* lg  */
+@media (max-width: 1024px) {
+      .edit-task-overlay {
+
+            width: calc(100%);
+            height: calc(100% - 72px - 80px);
+            top: 72px;
+            left: 0;
+
+      }
+}
+
+/* lg  */
+
+
+
+/* md  */
+@media (max-width: 768px) {
+
+ 
+      .edit-task-container {
+            width: 100%;
+            
+      }
+}
+
+/* sm  */
+@media (max-width: 640px) {
+
+      .edit-task-overlay{
+            top: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 100;
+      }
+      .edit-task-container {
+            width: 100%;
+            height: calc(100%) !important;
+            padding: 0;
+            border-radius: 0px;
+            padding-top: 16px;
+            
+            
+
+
+      }
+      .edit-task-wrapper{
+            height: 100%;
+            width: 100%;
+            padding: 16px;
+            border-radius: 0px;
+            
+            
+      }
+
+      .edit-button-container{
+            margin-bottom: 48px;
+      }
+}
